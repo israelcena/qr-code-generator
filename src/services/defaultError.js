@@ -1,3 +1,3 @@
-export default function defaultError(params) {
+export default function defaultError() {
   throw new Error('Error on application');
 };

@@ -1,6 +1,6 @@
 import chalk from "chalk";
 
-const mainPrompt = [
+const mainPromptSchema = [
   {
     name: "select",
     description: chalk.yellow.bgBlackBright.bold("Escolha a ferramente (1 - QRCODE ou 2 - PASSWORD)"),
@@ -10,4 +10,4 @@ const mainPrompt = [
   }
 ];
 
-export default mainPrompt;
+export default mainPromptSchema;
