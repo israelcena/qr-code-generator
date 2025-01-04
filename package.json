@@ -1,0 +1,13 @@
+{
+  "name": "qr-code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["qr-code", "nodejs", "israelcena"],
+  "author": "IsraelCena",
+  "license": "MIT",
+  "description": "A project in node for generate qr codes"
+}
