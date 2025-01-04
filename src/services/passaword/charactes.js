@@ -1,24 +1,22 @@
+import charactersOptions from './charactersOptions.json' assert { type: "json" };
+
+const charactersSets = {
+  UPPERCASE: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  LOWERCASE: "abcdefghijklmnopqrstuvwxyz",
+  NUMBERS: "0123456789",
+  SPECIAL_CHARACTERS: "!@#$%^&*()-_=+[]{}|;:<>?/`~"
+};
+
 export default function permittedCharecters() {
   let acceptedCharacters = [];
-  
-  if(process.env.UPPERCASE) {
-    acceptedCharacters.push(..."ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-  }
+  const isTruthy = (value) => value === true || value === "true";
 
-  if(process.env.LOWERCASE) {
-    acceptedCharacters.push(..."abcdefghijklmnopqrstuvwxyz");
+  for (const [key, value] of Object.entries(charactersSets)) {
+    if (isTruthy(charactersOptions[key])) {
+      acceptedCharacters.push(...value);
+    }
   }
-
-  if(process.env.NUMBERS) {
-    acceptedCharacters.push(..."0123456789");
-  }
-
-  if(process.env.SPECIAL_CHARACTERS) {
-    acceptedCharacters.push(..."!@#$%^&*()-_=+[]{}|;:',.<>?/`~");
-  }
-
   return acceptedCharacters;
 };
 
-export const passwordLegth = process.env.LENGTH;
-
+export const passwordLength = charactersOptions.LENGTH;

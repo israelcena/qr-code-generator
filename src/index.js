@@ -1,5 +1,5 @@
 import prompt from "prompt";
-import mainPropt from "./prompts/mainPrompt.js";
+import mainPropt from "./prompts-schema/mainPrompt.js";
 import createQRCode from "./services/qr-code/create.js";
 import createPassword from "./services/passaword/create.js";
 

@@ -1,6 +1,6 @@
 import chalk from "chalk";
 
-const qrCodePrompt = [
+const qrCodePromptSchema = [
   {
     name: "link",
     description: chalk.yellow("Digite o link para gerar o QR CODE"),
@@ -15,4 +15,4 @@ const qrCodePrompt = [
   }
 ];
 
-export default qrCodePrompt;
+export default qrCodePromptSchema;
