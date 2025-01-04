@@ -1,9 +1,10 @@
 import chalk from "chalk";
 import qrGenerator from "qrcode-terminal";
+import defaultError from "../defaultError.js";
 
 export default async function handler(err, result) {
   if (err) {
-    throw new Error('Error on application');
+    defaultError();
   }
 
   const small = result.type == 2;
